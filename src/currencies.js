@@ -21,6 +21,12 @@ var CURRENCIES = [{
     addressTypes: {prod: ['30', '05', '32'], testnet: ['6f', 'c4', '3a']},
     validator: BTCValidator
 },{
+    name: 'litecoincash',
+    symbol: 'lcc',
+    addressTypes: {prod: ['1c', '05', '32'], testnet: ['7f', 'c4', '3a']},
+    segwitHrp: 'lcc',
+    validator: BTCValidator
+},{
     name: 'peercoin',
     symbol: 'ppc',
     addressTypes: {prod: ['37', '75'], testnet: ['6f', 'c4']},

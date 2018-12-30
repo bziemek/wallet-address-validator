@@ -88,6 +88,24 @@ describe('WAValidator.validate()', function () {
             valid('QjpzxpbLp5pCGsCczMbfh1uhC3P89QZavY', 'litecoin', 'testnet');
         });
 
+        it('should return true for correct litecoincash addresses', function () {
+            valid('CHbJfeoBrUfd66o8ibNPZPXdTvSUiyfBCr', 'litecoincash');
+            valid('CHbJfeoBrUfd66o8ibNPZPXdTvSUiyfBCr', 'LCC');
+            valid('t8bfCj483JR9dDNT8Y3pwyXkd8xvoV5S54', 'litecoincash', 'testnet');
+
+            // p2sh addresses
+            valid('MH3mMe7CaeSGMtJMBZJAtiErJcbwxdiaJ5', 'litecoincash');
+            valid('3NJZLcZEEYBpxYEUGewU4knsQRn1WM5Fkt', 'litecoincash');
+            valid('QYuyK8xQtBwisKWan9ZWJhRAkgAkNqapas', 'litecoincash', 'testnet');
+            
+            // bech32 addresses
+            valid('lcc1qf8x9kq8frdfxcpn6hj2lr4lq5m4fmdggsd6w56', 'litecoincash');
+            //valid('tlcc1qlevmhq62dna5zvpmlc2sdcg3kp3k8cygfsf5fj', 'litecoincash', 'testnet');
+
+            invalid('MH3mMe7CaeSGMtJMBZJAtiErJcbwxdiBAD', 'litecoincash');
+            invalid('lcc1qf8x9kq8frdfxcpn6hj2lr4lq5m4fmdggsd6bad', 'litecoincash');
+        });
+
         it('should return true for correct peercoin addresses', function () {
             valid('PHCEsP6od3WJ8K2WKWEDBYKhH95pc9kiZN', 'peercoin');
             valid('PSbM1pGoE9dnAuVWvpQqTTYVpKZU41dNAz', 'peercoin');

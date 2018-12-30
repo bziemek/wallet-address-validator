@@ -61,6 +61,7 @@ npm install wallet-address-validator
 * Komodo/KMD, `'komodo'` or `'KMD'`
 
 * Litecoin/LTC, `'litecoin'` or `'LTC'`
+* Litecoin/LCC, `'litecoincash'` or `'LCC'`
 
 * Megacoin/MEC, `'megacoin'` or `'MEC'`
 
